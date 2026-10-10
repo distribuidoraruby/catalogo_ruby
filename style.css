@@ -1,23 +1,23 @@
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-body { background-color: #f4f4f9; padding: 20px; }
+body { background-color: #f4f4f9; padding: 15px; }
 
 header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background: #2c3e50; color: white; padding: 15px; border-radius: 8px; }
 
 #menu-categorias { display: flex; gap: 10px; margin-bottom: 20px; overflow-x: auto; padding-bottom: 10px; }
-.btn-categoria { padding: 10px 20px; border: none; background: #ddd; cursor: pointer; border-radius: 5px; font-size: 16px; font-weight: bold; }
+.btn-categoria { padding: 8px 16px; border: none; background: #ddd; cursor: pointer; border-radius: 5px; font-size: 14px; font-weight: bold; }
 .btn-categoria.activo { background: #3498db; color: white; }
 
-/* Reducimos el ancho de la columna de la grilla a 200px para tarjetas más angostas */
+/* Reducimos el ancho mínimo de la columna a 110px para que entren más columnas */
 #contenedor-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px; /* Espacio prolijo entre tarjeta y tarjeta */
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 8px;
 }
 
-/* Tarjeta más angosta */
+/* Tarjeta más compacta */
 .grupo-card {
     background: white;
-    padding: 8px; /* Reducimos un poco el padding interno para aprovechar el espacio */
+    padding: 6px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
@@ -26,13 +26,13 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     width: 100%;
 }
 
-/* Imagen del grupo adaptada a la nueva medida */
+/* Imagen del grupo adaptada a un tamaño menor */
 .grupo-card img {
     width: 100%;
-    height: 140px; /* Bajamos la altura proporcionalmente */
+    height: 100px;
     object-fit: contain;
     border-radius: 5px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     background: #fff;
 }
 
@@ -43,9 +43,9 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 
 /* Bloque de familia agrupada */
 .familia-bloque {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     border-bottom: 1px solid #f1f1f1;
-    padding-bottom: 4px;
+    padding-bottom: 3px;
 }
 .familia-bloque:last-child {
     border-bottom: none;
@@ -54,7 +54,7 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 }
 
 .familia-titulo {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: bold;
     color: #2c3e50;
     margin-bottom: 2px;
@@ -70,23 +70,23 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 }
 
 .item-codigo-familia {
-    font-size: 9px;
+    font-size: 8px;
     color: #95a5a6;
-    width: 32px;
+    width: 28px;
     flex-shrink: 0;
 }
 
 .item-volumen {
-    font-size: 10px;
+    font-size: 9px;
     color: #333;
     font-weight: 500;
     flex-grow: 1;
-    padding: 0 3px;
+    padding: 0 2px;
 }
 
 /* Fila para PRODUCTOS SUELTOS */
 .item-suelto {
-    padding: 5px 0;
+    padding: 4px 0;
     border-bottom: 1px solid #f1f1f1;
     display: flex;
     flex-direction: column;
@@ -96,7 +96,7 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 }
 
 .item-codigo {
-    font-size: 9px;
+    font-size: 8px;
     color: #95a5a6;
     margin-bottom: 1px;
 }
@@ -109,15 +109,15 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 }
 
 .item-descripcion {
-    font-size: 10px;
+    font-size: 9px;
     color: #333;
     font-weight: 500;
-    padding-right: 6px; 
+    padding-right: 4px; 
 }
 
 /* Precio general */
 .item-precio {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
     color: #27ae60;
     white-space: nowrap;
