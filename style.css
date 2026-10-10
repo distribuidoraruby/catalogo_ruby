@@ -7,14 +7,12 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 .btn-categoria { padding: 8px 16px; border: none; background: #ddd; cursor: pointer; border-radius: 5px; font-size: 14px; font-weight: bold; }
 .btn-categoria.activo { background: #3498db; color: white; }
 
-/* Reducimos el ancho mínimo de la columna a 110px para que entren más columnas */
 #contenedor-productos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     gap: 8px;
 }
 
-/* Tarjeta más compacta */
 .grupo-card {
     background: white;
     padding: 6px;
@@ -26,7 +24,6 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     width: 100%;
 }
 
-/* Imagen del grupo adaptada a un tamaño menor */
 .grupo-card img {
     width: 100%;
     height: 100px;
@@ -36,12 +33,10 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     background: #fff;
 }
 
-/* Contenedor de la lista de ítems */
 .grupo-items {
     width: 100%;
 }
 
-/* Bloque de familia agrupada */
 .familia-bloque {
     margin-bottom: 5px;
     border-bottom: 1px solid #f1f1f1;
@@ -61,7 +56,6 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     display: block;
 }
 
-/* Fila para FAMILIAS en una sola línea */
 .item-fila-familia {
     display: flex;
     align-items: center;
@@ -84,7 +78,6 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     padding: 0 2px;
 }
 
-/* Fila para PRODUCTOS SUELTOS */
 .item-suelto {
     padding: 4px 0;
     border-bottom: 1px solid #f1f1f1;
@@ -115,11 +108,17 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     padding-right: 4px; 
 }
 
-/* Precio general */
 .item-precio {
     font-size: 10px;
     font-weight: bold;
     color: #27ae60;
     white-space: nowrap;
     flex-shrink: 0;
+}
+
+/* Regla para adaptar dinámicamente en celulares */
+@media screen and (max-width: 600px) {
+    #contenedor-productos {
+        grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+    }
 }
