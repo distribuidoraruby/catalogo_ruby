@@ -1,110 +1,36 @@
-const contenedorProductos = document.getElementById("contenedor-productos");
-const menuCategorias = document.getElementById("menu-categorias");
+document.addEventListener("DOMContentLoaded", () => {
+    const contenedor = document.getElementById("contenedor-productos") || document.body;
 
-function formatearPrecio(precio) {
-    return Number(precio).toLocaleString('es-AR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-}
+    // Si no encuentra un contenedor específico, creamos uno dentro del body
+    let targetContainer = document.getElementById("contenedor-productos");
+    if (!targetContainer) {
+        targetContainer = document.createElement("div");
+        targetContainer.id = "contenedor-productos";
+        targetContainer.className = "catalogo-container";
+        document.body.appendChild(targetContainer);
+    } else {
+        targetContainer.className = "catalogo-container";
+    }
 
-function renderizarProductos(categoriaFiltro) {
-    contenedorProductos.innerHTML = ""; 
-    
-    const productosFiltrados = productos.filter(p => p.categoria === categoriaFiltro);
+    targetContainer.innerHTML = ""; // Limpiar antes de renderizar
 
-    const gruposMap = {};
-    productosFiltrados.forEach(producto => {
-        const g = producto.grupo;
-        if (!gruposMap[g]) {
-            gruposMap[g] = [];
-        }
-        gruposMap[g].push(producto);
-    });
+    productos.forEach(producto => {
+        const card = document.createElement("div");
+        card.className = "producto-card";
 
-    Object.keys(gruposMap).forEach(nombreGrupo => {
-        const itemsDelGrupo = gruposMap[nombreGrupo];
-        
-        const divGrupo = document.createElement("div");
-        divGrupo.classList.add("grupo-card");
+        // Si la familia está vacía, ocultamos esa línea para que no quede espacio en blanco
+        const htmlFamilia = producto.tituloFamilia ? `<span class="producto-familia">${producto.tituloFamilia}</span>` : '';
 
-        let htmlItems = '';
-
-        const familiasMap = {};
-        const itemsSueltos = [];
-
-        itemsDelGrupo.forEach(item => {
-            if (item.tituloFamilia) {
-                if (!familiasMap[item.tituloFamilia]) {
-                    familiasMap[item.tituloFamilia] = [];
-                }
-                familiasMap[item.tituloFamilia].push(item);
-            } else {
-                itemsSueltos.push(item);
-            }
-        });
-
-        // 1. Renderizamos las familias (Código, volumen y precio en una sola línea)
-        Object.keys(familiasMap).forEach(nombreFamilia => {
-            const variantes = familiasMap[nombreFamilia];
-            htmlItems += `<div class="familia-bloque">`;
-            htmlItems += `<span class="familia-titulo">${nombreFamilia}</span>`;
-            
-            variantes.forEach(item => {
-                htmlItems += `
-                    <div class="item-fila-familia">
-                        <span class="item-codigo-familia">${item.codigo}</span>
-                        <span class="item-volumen">${item.descripcion}</span>
-                        <span class="item-precio">$${formatearPrecio(item.precio)}</span>
-                    </div>
-                `;
-            });
-            htmlItems += `</div>`;
-        });
-
-        // 2. Renderizamos los productos sueltos (Código arriba, descripción y precio abajo)
-        itemsSueltos.forEach(item => {
-            htmlItems += `
-                <div class="item-suelto">
-                    <span class="item-codigo">Cód: ${item.codigo}</span>
-                    <div class="item-linea-principal">
-                        <span class="item-descripcion">${item.descripcion}</span>
-                        <span class="item-precio">$${formatearPrecio(item.precio)}</span>
-                    </div>
-                </div>
-            `;
-        });
-
-        divGrupo.innerHTML = `
-            <img src="imagenes/${nombreGrupo}.jpg" alt="Grupo ${nombreGrupo}" onerror="this.onerror=null; this.src='sin-foto.jpg'">
-            <div class="grupo-items">
-                ${htmlItems}
+        card.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.descripcion}" onerror="this.src='https://via.placeholder.com/140?text=Sin+Imagen'">
+            <div class="producto-info">
+                ${htmlFamilia}
+                <span class="producto-codigo">Cód: ${producto.codigo}</span>
+                <span class="producto-descripcion">${producto.descripcion}</span>
+                <span class="producto-precio">$${producto.precio.toLocaleString('es-AR')}</span>
             </div>
         `;
 
-        contenedorProductos.appendChild(divGrupo);
+        targetContainer.appendChild(card);
     });
-}
-
-function renderizarCategorias() {
-    menuCategorias.innerHTML = ""; 
-    
-    const categorias = [...new Set(productos.map(p => p.categoria))];
-    
-    categorias.forEach((cat, index) => {
-        const btn = document.createElement("button");
-        btn.classList.add("btn-categoria");
-        if(index === 0) btn.classList.add("activo");
-        btn.innerText = cat;
-        
-        btn.onclick = () => {
-            document.querySelectorAll(".btn-categoria").forEach(b => b.classList.remove("activo"));
-            btn.classList.add("activo");
-            renderizarProductos(cat);
-        };
-        menuCategorias.appendChild(btn);
-    });
-
-    if (categorias.length > 0) {
-        renderizarProductos(categorias[0]);
-    }
-}
-
-renderizarCategorias();
+});
