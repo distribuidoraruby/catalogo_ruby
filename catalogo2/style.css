@@ -1,1 +1,43 @@
+/* Contenedor de cada producto (Tarjeta horizontal) */
+.producto-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    gap: 20px; /* Espacio entre la imagen y los textos */
+}
 
+/* Imagen grande a la izquierda */
+.producto-card img {
+    width: 120px;   /* Puedes ajustar el tamaño según prefieras */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Contenedor de los datos a la derecha */
+.producto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Separación entre código, descripción y precio */
+}
+
+.producto-codigo {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.producto-descripcion {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.producto-precio {
+    font-size: 1.2rem;
+    color: #27ae60;
+    font-weight: bold;
+}
