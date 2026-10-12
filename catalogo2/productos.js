@@ -192,4 +192,41 @@ const productos = [
     { grupo: "t54", codigo: "10187", descripcion: "BALDE REDONDO COLORES 13L", precio: 8198, categoria: "Contenedores" },
     { grupo: "t55", codigo: "10188", descripcion: "ESCOBILLA BAÑO BLANCA", precio: 3303, categoria: "Contenedores" },
     { grupo: "t56", codigo: "10189", descripcion: "BANQUETA NIÑOS COLORES", precio: 4234, categoria: "Contenedores" },
-    { grupo: "t57", codigo: "10190", descripcion: "JARRA MEDIDORA"
+    { grupo: "t57", codigo: "10190", descripcion: "JARRA MEDIDORA", precio: 1673, categoria: "Contenedores" },
+    { grupo: "t58", codigo: "10191", descripcion: "VASO MEDIDOR", precio: 1052, categoria: "Contenedores" },
+    { grupo: "t59", codigo: "10192", descripcion: "TABLA PIZZERA CIRCULAR", precio: 1968, categoria: "Contenedores" },
+    { grupo: "t60", codigo: "10193", descripcion: "TABLA PARA PICAR RECTANGULAR", precio: 1609, categoria: "Contenedores" },
+
+    { grupo: "t61", codigo: "10194", tituloFamilia: "TAPER", descripcion: "CUADRADO 1,7 L", precio: 2703, categoria: "Contenedores" },
+    { grupo: "t61", codigo: "10195", tituloFamilia: "TAPER", descripcion: "RECTANGULAR 2,5L", precio: 3604, categoria: "Contenedores" },
+    { grupo: "t61", codigo: "10196", tituloFamilia: "TAPER", descripcion: "REDONDO 1,3L", precio: 2253, categoria: "Contenedores" },
+    { grupo: "t61", codigo: "10197", tituloFamilia: "TAPER", descripcion: "REDONDO CON CIERRE", precio: 2522, categoria: "Contenedores" },
+
+    { grupo: "t62", codigo: "10198", tituloFamilia: "ORGANIZADOR X 3", descripcion: "TRANSPARENTE", precio: 26597, categoria: "Contenedores" },
+    { grupo: "t62", codigo: "10199", tituloFamilia: "ORGANIZADOR X 3", descripcion: "COLOR", precio: 27347, categoria: "Contenedores" },
+
+    { grupo: "t63", codigo: "10200", tituloFamilia: "ORGANIZADOR", descripcion: "TRANSPARENTE CHICO", precio: 6761, categoria: "Contenedores" },
+    { grupo: "t63", codigo: "10201", tituloFamilia: "ORGANIZADOR", descripcion: "TRANSPARENTE MEDIANO", precio: 8122, categoria: "Contenedores" },
+    { grupo: "t63", codigo: "10202", tituloFamilia: "ORGANIZADOR", descripcion: "TRANSPARENTE GRANDE", precio: 11710, categoria: "Contenedores" },
+    { grupo: "t63", codigo: "10203", tituloFamilia: "ORGANIZADOR", descripcion: "COLOR CHICO", precio: 6941, categoria: "Contenedores" },
+    { grupo: "t63", codigo: "10204", tituloFamilia: "ORGANIZADOR", descripcion: "COLOR MEDIANO", precio: 8338, categoria: "Contenedores" },
+    { grupo: "t63", codigo: "10205", tituloFamilia: "ORGANIZADOR", descripcion: "COLOR GRANDE", precio: 12064, categoria: "Contenedores" },
+
+    { grupo: "t64", codigo: "10206", tituloFamilia: "CANASTA RATTAN", descripcion: "CHICA SIN TAPA", precio: 7827, categoria: "Contenedores" },
+    { grupo: "t64", codigo: "10207", tituloFamilia: "CANASTA RATTAN", descripcion: "CHICA CON TAPA", precio: 11811, categoria: "Contenedores" },
+    { grupo: "t64", codigo: "10208", tituloFamilia: "CANASTA RATTAN", descripcion: "SIN TAPA", precio: 18218, categoria: "Contenedores" },
+
+    { grupo: "t65", codigo: "10209", tituloFamilia: "BOYA ARO PILETA", descripcion: "GRANDE", precio: 6681, categoria: "Contenedores" },
+    { grupo: "t65", codigo: "10210", tituloFamilia: "BOYA ARO PILETA", descripcion: "MEDIANO", precio: 5346, categoria: "Contenedores" },
+    { grupo: "t65", codigo: "10211", tituloFamilia: "BOYA ARO PILETA", descripcion: "MINI", precio: 3433, categoria: "Contenedores" },
+
+    { grupo: "t66", codigo: "10212", tituloFamilia: "BOYA HONGUITO", descripcion: "CHICA", precio: 1850, categoria: "Contenedores" },
+    { grupo: "t66", codigo: "10213", tituloFamilia: "BOYA HONGUITO", descripcion: "GRANDE", precio: 2512, categoria: "Contenedores" },
+
+    { grupo: "t67", codigo: "10214", descripcion: "SACA HOJA", precio: 3072, categoria: "Contenedores" },
+
+    { grupo: "t68", codigo: "10215", tituloFamilia: "CABOS SACA HOJA", descripcion: "ALUMINIO 1,5 MTS", precio: 9438, categoria: "Contenedores" },
+    { grupo: "t68", codigo: "10216", tituloFamilia: "CABOS SACA HOJA", descripcion: "PLASTICO 1,4 MTS", precio: 6249, categoria: "Contenedores" },
+
+    { grupo: "t69", codigo: "10217", descripcion: "SAPITO RIEGO", precio: 841, categoria: "Contenedores" }
+];
