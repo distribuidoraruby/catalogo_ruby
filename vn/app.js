@@ -6,6 +6,7 @@ function formatearPrecio(precio) {
 }
 
 function renderizarProductos(categoriaFiltro) {
+    if (!contenedorProductos) return;
     contenedorProductos.innerHTML = ""; 
     
     const productosFiltrados = productos.filter(p => p.categoria === categoriaFiltro);
@@ -31,7 +32,7 @@ function renderizarProductos(categoriaFiltro) {
         const itemsSueltos = [];
 
         itemsDelGrupo.forEach(item => {
-            if (item.tituloFamilia) {
+            if (item.tituloFamilia && item.tituloFamilia.trim() !== "") {
                 if (!familiasMap[item.tituloFamilia]) {
                     familiasMap[item.tituloFamilia] = [];
                 }
@@ -41,7 +42,7 @@ function renderizarProductos(categoriaFiltro) {
             }
         });
 
-        // 1. Renderizamos las familias (Código, volumen y precio en una sola línea)
+        // 1. Renderizamos las familias
         Object.keys(familiasMap).forEach(nombreFamilia => {
             const variantes = familiasMap[nombreFamilia];
             htmlItems += `<div class="familia-bloque">`;
@@ -59,7 +60,7 @@ function renderizarProductos(categoriaFiltro) {
             htmlItems += `</div>`;
         });
 
-        // 2. Renderizamos los productos sueltos (Código arriba, descripción y precio abajo)
+        // 2. Renderizamos los productos sueltos
         itemsSueltos.forEach(item => {
             htmlItems += `
                 <div class="item-suelto">
@@ -73,7 +74,7 @@ function renderizarProductos(categoriaFiltro) {
         });
 
         divGrupo.innerHTML = `
-            <img src="imagenes/${nombreGrupo}.jpg" alt="Grupo ${nombreGrupo}" onerror="this.onerror=null; this.src='sin-foto.jpg'">
+            <img src="imagenes/${nombreGrupo}.jpg" alt="Grupo ${nombreGrupo}" onerror="this.src='https://via.placeholder.com/100?text=Sin+Imagen'">
             <div class="grupo-items">
                 ${htmlItems}
             </div>
@@ -84,6 +85,7 @@ function renderizarProductos(categoriaFiltro) {
 }
 
 function renderizarCategorias() {
+    if (!menuCategorias) return;
     menuCategorias.innerHTML = ""; 
     
     const categorias = [...new Set(productos.map(p => p.categoria))];
