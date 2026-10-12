@@ -42,7 +42,7 @@ function renderizarProductos(categoriaFiltro) {
             }
         });
 
-        // 1. Renderizamos las familias
+        // 1. Renderizamos las familias (Código chiquito y gris arriba, volumen y precio abajo)
         Object.keys(familiasMap).forEach(nombreFamilia => {
             const variantes = familiasMap[nombreFamilia];
             htmlItems += `<div class="familia-bloque">`;
@@ -50,10 +50,12 @@ function renderizarProductos(categoriaFiltro) {
             
             variantes.forEach(item => {
                 htmlItems += `
-                    <div class="item-fila-familia">
-                        <span class="item-codigo-familia">${item.codigo}</span>
-                        <span class="item-volumen">${item.descripcion}</span>
-                        <span class="item-precio">$${formatearPrecio(item.precio)}</span>
+                    <div class="item-suelto">
+                        <span class="item-codigo">Cód: ${item.codigo}</span>
+                        <div class="item-linea-principal">
+                            <span class="item-descripcion">${item.descripcion}</span>
+                            <span class="item-precio">$${formatearPrecio(item.precio)}</span>
+                        </div>
                     </div>
                 `;
             });
