@@ -9,13 +9,13 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 
 #contenedor-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* Un poquito más de ancho por tarjeta */
+    gap: 12px;
 }
 
 .grupo-card {
     background: white;
-    padding: 6px;
+    padding: 8px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
@@ -26,10 +26,10 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 
 .grupo-card img {
     width: 100%;
-    height: 100px;
+    height: 110px;
     object-fit: contain;
     border-radius: 5px;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     background: #fff;
 }
 
@@ -38,9 +38,9 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 }
 
 .familia-bloque {
-    margin-bottom: 5px;
-    border-bottom: 1px solid #f1f1f1;
-    padding-bottom: 3px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
 }
 .familia-bloque:last-child {
     border-bottom: none;
@@ -52,35 +52,39 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     font-size: 9px;
     font-weight: bold;
     color: #2c3e50;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
     display: block;
+    line-height: 1.2;
 }
 
 .item-fila-familia {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 2px 0;
+    padding: 3px 0;
+    gap: 4px;
 }
 
 .item-codigo-familia {
-    font-size: 8px;
-    color: #95a5a6;
-    width: 28px;
+    font-size: 7.5px;
+    color: #888;
+    width: 32px; /* Espacio fijo para que el código no se mueva */
     flex-shrink: 0;
+    line-height: 1.2;
 }
 
 .item-volumen {
-    font-size: 9px;
+    font-size: 8.5px;
     color: #333;
     font-weight: 500;
     flex-grow: 1;
     padding: 0 2px;
+    line-height: 1.2;
 }
 
 .item-suelto {
-    padding: 4px 0;
-    border-bottom: 1px solid #f1f1f1;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
     display: flex;
     flex-direction: column;
 }
@@ -89,27 +93,28 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 }
 
 .item-codigo {
-    font-size: 8px;
-    color: #95a5a6;
-    margin-bottom: 1px;
+    font-size: 7.5px;
+    color: #888;
+    margin-bottom: 2px;
 }
 
 .item-linea-principal {
     display: flex;
     justify-content: space-between; 
-    align-items: baseline;
+    align-items: flex-start;
     width: 100%;
+    gap: 4px;
 }
 
 .item-descripcion {
-    font-size: 9px;
+    font-size: 8.5px;
     color: #333;
     font-weight: 500;
-    padding-right: 4px; 
+    line-height: 1.2;
 }
 
 .item-precio {
-    font-size: 10px;
+    font-size: 9.5px;
     font-weight: bold;
     color: #27ae60;
     white-space: nowrap;
@@ -119,6 +124,6 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 /* Regla para adaptar dinámicamente en celulares */
 @media screen and (max-width: 600px) {
     #contenedor-productos {
-        grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     }
 }
