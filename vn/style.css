@@ -87,8 +87,9 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     font-weight: 500;
 }
 
+/* Precio más grande y destacado */
 .item-precio {
-    font-size: 9.5px;
+    font-size: 11.5px;
     font-weight: bold;
     color: #27ae60;
     white-space: nowrap;
