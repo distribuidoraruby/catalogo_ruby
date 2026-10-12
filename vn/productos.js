@@ -8,8 +8,9 @@ const productos = [
     { grupo: "40038867", codigo: "40038867", tituloFamilia: "", descripcion: "PROTECTOR SOLAR VN FPS 40 120 ml (POMO)", precio: 10052, categoria: "VN" },
     
     // Protector solar VN 50 FPS (Pomo)
+{ grupo: "40038869", codigo: "40038871", tituloFamilia: "PROTECTOR SOLAR VN 50 FPS (POMO)", descripcion: "50 ML", precio: 6868, categoria: "VN" },
     { grupo: "40038869", codigo: "40038869", tituloFamilia: "PROTECTOR SOLAR VN 50 FPS (POMO)", descripcion: "120 ml", precio: 10530, categoria: "VN" },
-    { grupo: "40038869", codigo: "40038871", tituloFamilia: "PROTECTOR SOLAR VN 50 FPS (POMO)", descripcion: "50 ML", precio: 6868, categoria: "VN" },
+    
     { grupo: "40038869", codigo: "40038874", tituloFamilia: "PROTECTOR SOLAR VN 50 FPS (POMO)", descripcion: "FAMILIAR 250 ml", precio: 16941, categoria: "VN" },
     
     // Protector solar bebés
