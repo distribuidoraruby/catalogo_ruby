@@ -42,7 +42,7 @@ function renderizarProductos(categoriaFiltro) {
             }
         });
 
-        // 1. Renderizamos las familias (Código chiquito y gris arriba, volumen y precio abajo)
+        // 1. Renderizamos las familias
         Object.keys(familiasMap).forEach(nombreFamilia => {
             const variantes = familiasMap[nombreFamilia];
             htmlItems += `<div class="familia-bloque">`;
