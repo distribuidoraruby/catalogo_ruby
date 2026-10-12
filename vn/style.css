@@ -9,7 +9,7 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 
 #contenedor-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); /* Un poquito más de ancho por tarjeta */
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     gap: 12px;
 }
 
@@ -57,34 +57,9 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     line-height: 1.2;
 }
 
-.item-fila-familia {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 3px 0;
-    gap: 4px;
-}
-
-.item-codigo-familia {
-    font-size: 7.5px;
-    color: #888;
-    width: 32px; /* Espacio fijo para que el código no se mueva */
-    flex-shrink: 0;
-    line-height: 1.2;
-}
-
-.item-volumen {
-    font-size: 8.5px;
-    color: #333;
-    font-weight: 500;
-    flex-grow: 1;
-    padding: 0 2px;
-    line-height: 1.2;
-}
-
 .item-suelto {
-    padding: 6px 0;
-    border-bottom: 1px solid #eee;
+    padding: 4px 0;
+    border-bottom: 1px solid #f1f1f1;
     display: flex;
     flex-direction: column;
 }
@@ -95,13 +70,13 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 .item-codigo {
     font-size: 7.5px;
     color: #888;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
 }
 
 .item-linea-principal {
     display: flex;
     justify-content: space-between; 
-    align-items: flex-start;
+    align-items: baseline;
     width: 100%;
     gap: 4px;
 }
@@ -110,7 +85,6 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     font-size: 8.5px;
     color: #333;
     font-weight: 500;
-    line-height: 1.2;
 }
 
 .item-precio {
@@ -121,7 +95,6 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     flex-shrink: 0;
 }
 
-/* Regla para adaptar dinámicamente en celulares */
 @media screen and (max-width: 600px) {
     #contenedor-productos {
         grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
