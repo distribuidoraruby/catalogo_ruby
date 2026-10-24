@@ -9,7 +9,7 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 
 #contenedor-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     gap: 10px;
 }
 
@@ -22,7 +22,7 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     flex-direction: column;
     align-items: center;
     width: 100%;
-    overflow: hidden; /* Corta estrictamente cualquier cosa que intente salir */
+    overflow: hidden;
 }
 
 .grupo-card img {
@@ -57,23 +57,21 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     display: block;
 }
 
-/* Fila de familia estructurada para ajuste de renglón automático */
+/* Fila de familia: Código y texto arriba, precio abajo a la derecha */
 .item-fila-familia {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* Permite que el precio y el texto se alinien arriba si bajan de renglón */
-    padding: 3px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4px 0;
     border-bottom: 1px dashed #eee;
     width: 100%;
-    gap: 4px;
 }
 
-.item-texto-contenedor {
+.item-info-superior {
     display: flex;
     align-items: flex-start;
     gap: 3px;
-    flex-grow: 1;
-    min-width: 0; /* Vital para que el flexbox permita hacer saltos de línea en textos largos */
+    width: 100%;
 }
 
 .item-codigo-familia {
@@ -86,14 +84,17 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     font-size: 9px;
     color: #333;
     font-weight: 500;
-    word-break: break-word; /* Obliga al texto a bajar de renglón si no entra en el ancho disponible */
+    word-break: break-word;
+    flex-grow: 1;
 }
 
+/* Producto suelto: Código y descripción arriba, precio abajo a la derecha */
 .item-suelto {
     padding: 4px 0;
     border-bottom: 1px solid #f1f1f1;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     width: 100%;
 }
 .item-suelto:last-child {
@@ -106,34 +107,27 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     margin-bottom: 1px;
 }
 
-.item-linea-principal {
-    display: flex;
-    justify-content: space-between; 
-    align-items: flex-start;
-    width: 100%;
-    gap: 4px;
-}
-
 .item-descripcion {
     font-size: 9px;
     color: #333;
     font-weight: 500;
-    word-break: break-word; /* Fuerza el salto de línea si la descripción es muy larga */
-    flex-grow: 1;
-    min-width: 0;
+    word-break: break-word;
+    width: 100%;
 }
 
+/* El precio siempre va abajo a la derecha, en su propio espacio seguro */
 .item-precio {
     font-size: 9px;
     font-weight: bold;
     color: #27ae60;
-    white-space: nowrap; /* Evita que el precio se rompa a la mitad (ej: $26. | 597) */
-    flex-shrink: 0;
+    align-self: flex-end;
+    margin-top: 2px;
+    white-space: nowrap;
 }
 
 /* Regla para adaptar dinámicamente en celulares */
 @media screen and (max-width: 600px) {
     #contenedor-productos {
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(115px, 1fr));
     }
 }
