@@ -4,18 +4,18 @@ body { background-color: #f4f4f9; padding: 15px; }
 header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background: #2c3e50; color: white; padding: 15px; border-radius: 8px; }
 
 #menu-categorias { display: flex; gap: 10px; margin-bottom: 20px; overflow-x: auto; padding-bottom: 10px; }
-.btn-categoria { padding: 8px 16px; border: none; background: #ddd; cursor: pointer; border-radius: 5px; font-size: 14px; font-weight: bold; }
+.btn-categoria { padding: 8px 16px; border: none; background: #ddd; cursor: pointer; border-radius: 5px; font-size: 14px; font-weight: bold; white-space: nowrap; }
 .btn-categoria.activo { background: #3498db; color: white; }
 
 #contenedor-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
 }
 
 .grupo-card {
     background: white;
-    padding: 6px;
+    padding: 8px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
@@ -26,7 +26,7 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 
 .grupo-card img {
     width: 100%;
-    height: 100px;
+    height: 90px;
     object-fit: contain;
     border-radius: 5px;
     margin-bottom: 6px;
@@ -38,9 +38,9 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 }
 
 .familia-bloque {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     border-bottom: 1px solid #f1f1f1;
-    padding-bottom: 3px;
+    padding-bottom: 4px;
 }
 .familia-bloque:last-child {
     border-bottom: none;
@@ -66,7 +66,7 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 .item-codigo-familia {
     font-size: 8px;
     color: #95a5a6;
-    width: 28px;
+    width: 32px;
     flex-shrink: 0;
 }
 
@@ -109,7 +109,7 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 }
 
 .item-precio {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: bold;
     color: #27ae60;
     white-space: nowrap;
@@ -119,6 +119,6 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 /* Regla para adaptar dinámicamente en celulares */
 @media screen and (max-width: 600px) {
     #contenedor-productos {
-        grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
     }
 }
