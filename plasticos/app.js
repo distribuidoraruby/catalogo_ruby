@@ -50,8 +50,10 @@ function renderizarProductos(categoriaFiltro) {
             variantes.forEach(item => {
                 htmlItems += `
                     <div class="item-fila-familia">
-                        <span class="item-codigo-familia">${item.codigo}</span>
-                        <span class="item-volumen">${item.descripcion}</span>
+                        <div class="item-texto-contenedor">
+                            <span class="item-codigo-familia">${item.codigo}</span>
+                            <span class="item-volumen">${item.descripcion}</span>
+                        </div>
                         <span class="item-precio">$${formatearPrecio(item.precio)}</span>
                     </div>
                 `;
