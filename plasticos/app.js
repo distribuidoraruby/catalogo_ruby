@@ -41,7 +41,7 @@ function renderizarProductos(categoriaFiltro) {
             }
         });
 
-        // 1. Renderizamos las familias (Código, volumen y precio en una sola línea)
+        // 1. Renderizamos las familias
         Object.keys(familiasMap).forEach(nombreFamilia => {
             const variantes = familiasMap[nombreFamilia];
             htmlItems += `<div class="familia-bloque">`;
@@ -59,7 +59,7 @@ function renderizarProductos(categoriaFiltro) {
             htmlItems += `</div>`;
         });
 
-        // 2. Renderizamos los productos sueltos (Código arriba, descripción y precio abajo)
+        // 2. Renderizamos los productos sueltos
         itemsSueltos.forEach(item => {
             htmlItems += `
                 <div class="item-suelto">
