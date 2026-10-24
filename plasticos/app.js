@@ -50,7 +50,7 @@ function renderizarProductos(categoriaFiltro) {
             variantes.forEach(item => {
                 htmlItems += `
                     <div class="item-fila-familia">
-                        <div class="item-texto-contenedor">
+                        <div class="item-info-superior">
                             <span class="item-codigo-familia">${item.codigo}</span>
                             <span class="item-volumen">${item.descripcion}</span>
                         </div>
@@ -66,10 +66,10 @@ function renderizarProductos(categoriaFiltro) {
             htmlItems += `
                 <div class="item-suelto">
                     <span class="item-codigo">Cód: ${item.codigo}</span>
-                    <div class="item-linea-principal">
+                    <div class="item-info-superior">
                         <span class="item-descripcion">${item.descripcion}</span>
-                        <span class="item-precio">$${formatearPrecio(item.precio)}</span>
                     </div>
+                    <span class="item-precio">$${formatearPrecio(item.precio)}</span>
                 </div>
             `;
         });
