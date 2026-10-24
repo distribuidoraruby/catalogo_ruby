@@ -12,11 +12,11 @@ const productos = [
     { grupo: "b", codigo: "10008", tituloFamilia: "CONTENEDOR", descripcion: "N°3 1300CC", precio: 1935.7, categoria: "Contenedores" },
     
     // Grupos C1 al C6 (Productos sueltos / únicos)
-    { grupo: "c1", codigo: "10009", descripcion: "SET 5 CONTENEDORES RECTANGULARES TRANSPARENTE", precio: 27869.4, categoria: "Contenedores" },
+    { grupo: "c1", codigo: "10009", descripcion: "SET 5 CONTENEDORES RECTANGULARES TRANSP.", precio: 27869.4, categoria: "Contenedores" },
     { grupo: "c2", codigo: "10010", descripcion: "SET 3 CONTENEDORES HERMETICOS", precio: 4180.8, categoria: "Contenedores" },
-    { grupo: "c3", codigo: "10011", descripcion: "SET 3 CONTENEDORES RECTANGULARES TRANSPARENTES", precio: 13161.2, categoria: "Contenedores" },
+    { grupo: "c3", codigo: "10011", descripcion: "SET 3 CONTENEDORES RECTANGULARES TRANSP.S", precio: 13161.2, categoria: "Contenedores" },
     { grupo: "c4", codigo: "10012", descripcion: "CAJA NEGRAB70", precio: 20127.9, categoria: "Contenedores" },
-    { grupo: "c5", codigo: "10013", descripcion: "CAJA TRANSPARENTE 70", precio: 32823.7, categoria: "Contenedores" },
+    { grupo: "c5", codigo: "10013", descripcion: "CAJA TRANSP. 70", precio: 32823.7, categoria: "Contenedores" },
     { grupo: "c6", codigo: "10014", descripcion: "FRASCO HERMÉTICO 1.4L", precio: 8516.3, categoria: "Contenedores" },
     
     // Grupo D: Herméticos rectangulares (Agrupados por familia)
@@ -202,12 +202,12 @@ const productos = [
     { grupo: "t61", codigo: "10196", tituloFamilia: "TAPER", descripcion: "REDONDO 1,3L", precio: 2253, categoria: "Contenedores" },
     { grupo: "t61", codigo: "10197", tituloFamilia: "TAPER", descripcion: "REDONDO CON CIERRE", precio: 2522, categoria: "Contenedores" },
     
-    { grupo: "t62", codigo: "10198", tituloFamilia: "ORGANIZADOR X 3", descripcion: "TRANSPARENTE", precio: 26597, categoria: "Contenedores" },
+    { grupo: "t62", codigo: "10198", tituloFamilia: "ORGANIZADOR X 3", descripcion: "TRANSP.", precio: 26597, categoria: "Contenedores" },
     { grupo: "t62", codigo: "10199", tituloFamilia: "ORGANIZADOR X 3", descripcion: "COLOR", precio: 27347, categoria: "Contenedores" },
     
-    { grupo: "t63", codigo: "10200", tituloFamilia: "ORGANIZADOR", descripcion: "TRANSPARENTE CHICO", precio: 6761, categoria: "Contenedores" },
-    { grupo: "t63", codigo: "10201", tituloFamilia: "ORGANIZADOR", descripcion: "TRANSPARENTE MEDIANO", precio: 8122, categoria: "Contenedores" },
-    { grupo: "t63", codigo: "10202", tituloFamilia: "ORGANIZADOR", descripcion: "TRANSPARENTE GRANDE", precio: 11710, categoria: "Contenedores" },
+    { grupo: "t63", codigo: "10200", tituloFamilia: "ORGANIZADOR", descripcion: "TRANSP. CHICO", precio: 6761, categoria: "Contenedores" },
+    { grupo: "t63", codigo: "10201", tituloFamilia: "ORGANIZADOR", descripcion: "TRANSP. MEDIANO", precio: 8122, categoria: "Contenedores" },
+    { grupo: "t63", codigo: "10202", tituloFamilia: "ORGANIZADOR", descripcion: "TRANSP. GRANDE", precio: 11710, categoria: "Contenedores" },
     { grupo: "t63", codigo: "10203", tituloFamilia: "ORGANIZADOR", descripcion: "COLOR CHICO", precio: 6941, categoria: "Contenedores" },
     { grupo: "t63", codigo: "10204", tituloFamilia: "ORGANIZADOR", descripcion: "COLOR MEDIANO", precio: 8338, categoria: "Contenedores" },
     { grupo: "t63", codigo: "10205", tituloFamilia: "ORGANIZADOR", descripcion: "COLOR GRANDE", precio: 12064, categoria: "Contenedores" },
