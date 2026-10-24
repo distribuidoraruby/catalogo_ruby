@@ -9,7 +9,7 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 
 #contenedor-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); /* Ligeramente más ancho para dar respiro */
     gap: 10px;
 }
 
@@ -22,7 +22,7 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     flex-direction: column;
     align-items: center;
     width: 100%;
-    overflow: hidden; /* Evita que cualquier elemento se salga de los bordes de la tarjeta */
+    overflow: hidden;
 }
 
 .grupo-card img {
@@ -59,18 +59,29 @@ header { display: flex; justify-content: space-between; align-items: center; mar
 
 .item-fila-familia {
     display: flex;
-    flex-wrap: wrap; /* Permite un ajuste fluido si el espacio es muy estrecho */
-    align-items: baseline;
-    justify-content: space-between;
-    padding: 3px 0;
+    flex-direction: column; /* Cambiamos a columna para evitar desbordes en nombres largos */
+    align-items: flex-start;
+    padding: 4px 0;
     border-bottom: 1px dashed #eee;
+}
+
+.item-fila-familia div-linea {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.item-info-superior {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 4px;
 }
 
 .item-codigo-familia {
     font-size: 8px;
     color: #95a5a6;
     flex-shrink: 0;
-    margin-right: 4px;
 }
 
 .item-volumen {
@@ -78,8 +89,15 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     color: #333;
     font-weight: 500;
     flex-grow: 1;
-    word-break: break-word; /* Evita desbordamientos por textos largos */
-    padding-right: 4px;
+    word-break: break-word;
+}
+
+.item-precio-familia {
+    font-size: 9px;
+    font-weight: bold;
+    color: #27ae60;
+    align-self: flex-end; /* Alinea el precio a la derecha en su propia línea inferior */
+    margin-top: 1px;
 }
 
 .item-suelto {
@@ -120,9 +138,8 @@ header { display: flex; justify-content: space-between; align-items: center; mar
     flex-shrink: 0;
 }
 
-/* Regla para adaptar dinámicamente en celulares */
 @media screen and (max-width: 600px) {
     #contenedor-productos {
-        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     }
 }
