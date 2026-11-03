@@ -1,41 +1,32 @@
 const productos = [
-    // Protector solar VN 30 FPS (Pomo)
-    { grupo: "40038872", codigo: "40038872", tituloFamilia: "PROTECTOR SOLAR VN 30 FPS (POMO)", descripcion: "50 ML", precio: 6243, categoria: "VN" },
-    { grupo: "40038872", codigo: "40038866", tituloFamilia: "PROTECTOR SOLAR VN 30 FPS (POMO)", descripcion: "120 ml", precio: 9495, categoria: "VN" },
-    { grupo: "40038872", codigo: "40038873", tituloFamilia: "PROTECTOR SOLAR VN 30 FPS (POMO)", descripcion: "FAMILIAR 250 ml", precio: 15401, categoria: "VN" },
-    
-    // Protector solar VN FPS 40
-    { grupo: "40038867", codigo: "40038867", tituloFamilia: "", descripcion: "PROTECTOR SOLAR VN FPS 40 120 ml (POMO)", precio: 10052, categoria: "VN" },
-    
-    // Protector solar VN 50 FPS (Pomo)
-{ grupo: "40038869", codigo: "40038871", tituloFamilia: "PROTECTOR SOLAR VN 50 FPS (POMO)", descripcion: "50 ML", precio: 6868, categoria: "VN" },
-    { grupo: "40038869", codigo: "40038869", tituloFamilia: "PROTECTOR SOLAR VN 50 FPS (POMO)", descripcion: "120 ml", precio: 10530, categoria: "VN" },
-    
-    { grupo: "40038869", codigo: "40038874", tituloFamilia: "PROTECTOR SOLAR VN 50 FPS (POMO)", descripcion: "FAMILIAR 250 ml", precio: 16941, categoria: "VN" },
-    
-    // Protector solar bebés
-    { grupo: "40038870", codigo: "40038870", tituloFamilia: "", descripcion: "PROTECTOR SOLAR VN FPS 60 BABY & KIDS 120 ml (POMO)", precio: 12487, categoria: "VN" },
-    
-    // Protectores solares en Aerosol
-    { grupo: "40038709", codigo: "40038709", tituloFamilia: "", descripcion: "PROT SOLAR AEROSOL VN FPS30 250 ML (AEROSOL)", precio: 23725, categoria: "VN" },
-    { grupo: "40038710", codigo: "40038710", tituloFamilia: "", descripcion: "PROT SOLAR AEROSOL VN FPS50 250 ML (AEROSOL)", precio: 26098, categoria: "VN" },
-    
-    // Protectores Dry Feel (Spray)
-    { grupo: "40038490", codigo: "40038490", tituloFamilia: "", descripcion: "PROT SOLAR DRY FEEL VN FPS 30 190 ml (SPRAY)", precio: 17399, categoria: "VN" },
-    { grupo: "40038492", codigo: "40038492", tituloFamilia: "", descripcion: "PROT SOLAR DRY FEEL VN FPS 50 190 ml (SPRAY)", precio: 19147, categoria: "VN" },
-    
-    // Protectores Emulsion Spray
-    { grupo: "40038875", codigo: "40038875", tituloFamilia: "", descripcion: "PROT SOL EMULSION SPRAY VN FPS 30 190 ml", precio: 12820, categoria: "VN" },
-    { grupo: "40038876", codigo: "40038876", tituloFamilia: "", descripcion: "PROT SOL EMULSION SPRAY VN FPS 50 190 ml", precio: 14069, categoria: "VN" },
-    
-    // Otros productos
-    { grupo: "40038881", codigo: "40038881", tituloFamilia: "", descripcion: "ACEITE SOLAR VN FPS 10 190 ML", precio: 13486, categoria: "VN" },
-    { grupo: "40038883", codigo: "40038883", tituloFamilia: "", descripcion: "AUTOBRONCEANT VN 220ML", precio: 13486, categoria: "VN" },
-    { grupo: "40038880", codigo: "40038880", tituloFamilia: "", descripcion: "CREMA SAPOLAN VN 200 ML", precio: 8491, categoria: "VN" },
-    { grupo: "40038877", codigo: "40038877", tituloFamilia: "", descripcion: "GEL POST SOLAR VN ALOE 150 gr", precio: 11321, categoria: "VN" },
-    
-    // Protectores Faciales
-    { grupo: "40043579", codigo: "40043579", tituloFamilia: "", descripcion: "PROTECTOR FACIAL VN FPS 50 x 50ml TONO MEDIO", precio: 17836, categoria: "VN" },
-    { grupo: "40043580", codigo: "40043580", tituloFamilia: "", descripcion: "PROTECTOR FACIAL VN FPS 50 x 50ml TONO CLARO", precio: 17836, categoria: "VN" },
-    { grupo: "40043581", codigo: "40043581", tituloFamilia: "", descripcion: "PROTECTOR FACIAL VN FPS 50 x 50ml", precio: 17836, categoria: "VN" }
+    { grupo: "A0008", codigo: "A0008", tituloFamilia: "", descripcion: "YARA MOI BLANCO", precio: 22100, categoria: "Perfumes" },
+    { grupo: "A0009", codigo: "A0009", tituloFamilia: "", descripcion: "HER CONFESSION", precio: 39780, categoria: "Perfumes" },
+    { grupo: "A0010", codigo: "A0010", tituloFamilia: "", descripcion: "ORIENTICA AMBER ROUGE", precio: 31200, categoria: "Perfumes" },
+    { grupo: "A0011", codigo: "A0011", tituloFamilia: "", descripcion: "BADEE AL OUD NOBLE BLUSH", precio: 31200, categoria: "Perfumes" },
+    { grupo: "A0012", codigo: "A0012", tituloFamilia: "", descripcion: "ASAD NEGRO ELIXIR", precio: 22100, categoria: "Perfumes" },
+    { grupo: "A0016", codigo: "A0016", tituloFamilia: "", descripcion: "AMEERAT AL ARAB", precio: 9880, categoria: "Perfumes" },
+    { grupo: "A0017", codigo: "A0017", tituloFamilia: "", descripcion: "ODYSSEY DUBAI CHOCOLAT", precio: 27300, categoria: "Perfumes" },
+    { grupo: "A0019", codigo: "A0019", tituloFamilia: "", descripcion: "BHARARA VIKING CAIRO", precio: 52650, categoria: "Perfumes" },
+    { grupo: "A0020", codigo: "A0020", tituloFamilia: "", descripcion: "ASAD BOURBON", precio: 13000, categoria: "Perfumes" },
+    { grupo: "A0021", codigo: "A0021", tituloFamilia: "", descripcion: "YARA VIOLETA", precio: 22100, categoria: "Perfumes" },
+    { grupo: "A0024", codigo: "A0024", tituloFamilia: "", descripcion: "RAVE NOW WHITE", precio: 22100, categoria: "Perfumes" },
+    { grupo: "A0026", codigo: "A0026", tituloFamilia: "", descripcion: "XERJOFF CORO C/ PAÑUELO", precio: 49920, categoria: "Perfumes" },
+    { grupo: "A0027", codigo: "A0027", tituloFamilia: "", descripcion: "ODYSSEY WILD ONE GOLD", precio: 27300, categoria: "Perfumes" },
+    { grupo: "A0028", codigo: "A0028", tituloFamilia: "", descripcion: "XERJOFF ERBA PURA C/ PAÑUELO", precio: 49920, categoria: "Perfumes" },
+    { grupo: "A0029", codigo: "A0029", tituloFamilia: "", descripcion: "ODYSSEY SPECTRA BLU", precio: 26000, categoria: "Perfumes" },
+    { grupo: "A0030", codigo: "A0030", tituloFamilia: "", descripcion: "ODYSSEY REVOLUTION ULTRA", precio: 26000, categoria: "Perfumes" },
+    { grupo: "A0031", codigo: "A0031", tituloFamilia: "", descripcion: "ODYSSEY GO MANGO", precio: 27300, categoria: "Perfumes" },
+    { grupo: "A0032", codigo: "A0032", tituloFamilia: "", descripcion: "LATTAFA HIS CONFESSION", precio: 39780, categoria: "Perfumes" },
+    { grupo: "A0039", codigo: "A0039", tituloFamilia: "", descripcion: "AFNAN 9 PM ELIXIR", precio: 33800, categoria: "Perfumes" },
+    { grupo: "A0038", codigo: "A0038", tituloFamilia: "", descripcion: "AFNAN SUPREMACY IN HEAVEN", precio: 33800, categoria: "Perfumes" },
+    { grupo: "A0050", codigo: "A0050", tituloFamilia: "", descripcion: "AL HARAMAIN AMBER OUD GOLD", precio: 47840, categoria: "Perfumes" },
+    { grupo: "A0037", codigo: "A0037", tituloFamilia: "", descripcion: "CLUB DE NUIT LIONHEART MAN", precio: 44590, categoria: "Perfumes" },
+    { grupo: "A0036", codigo: "A0036", tituloFamilia: "", descripcion: "ECLAIRE BANOFFI", precio: 38610, categoria: "Perfumes" },
+    { grupo: "A0040", codigo: "A0040", tituloFamilia: "", descripcion: "ECLAIRE PISTACHE", precio: 38610, categoria: "Perfumes" },
+    { grupo: "A0051", codigo: "A0051", tituloFamilia: "", descripcion: "FAKHAR BLANCO", precio: 30160, categoria: "Perfumes" },
+    { grupo: "A0025", codigo: "A0025", tituloFamilia: "", descripcion: "FAKHAR NEGRO", precio: 30160, categoria: "Perfumes" },
+    { grupo: "A0034", codigo: "A0034", tituloFamilia: "", descripcion: "FRENCH AVENUE SPECTRE WRAITH 80ml", precio: 43160, categoria: "Perfumes" },
+    { grupo: "A0035", codigo: "A0035", tituloFamilia: "", descripcion: "ODYSSEY BLACK FOREST", precio: 27300, categoria: "Perfumes" },
+    { grupo: "A0033", codigo: "A0033", tituloFamilia: "", descripcion: "PERFUME HAWAS FOR HIM ATLANTIS", precio: 22100, categoria: "Perfumes" },
+    { grupo: "A0014", codigo: "A0014", tituloFamilia: "", descripcion: "RAVE NOW EAU DE PARFUM", precio: 22100, categoria: "Perfumes" }
 ];
