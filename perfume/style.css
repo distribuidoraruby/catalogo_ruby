@@ -1,1 +1,120 @@
 
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+body { background-color: #f4f4f9; padding: 15px; }
+
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; background: #2c3e50; color: white; padding: 15px; border-radius: 8px; }
+
+/* Estilos para el Banner de Presentación */
+.banner-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.banner-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+#menu-categorias { display: flex; gap: 10px; margin-bottom: 20px; overflow-x: auto; padding-bottom: 10px; }
+.btn-categoria { padding: 8px 16px; border: none; background: #ddd; cursor: pointer; border-radius: 5px; font-size: 14px; font-weight: bold; }
+.btn-categoria.activo { background: #3498db; color: white; }
+
+#contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.grupo-card {
+    background: white;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.grupo-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    background: #fff;
+}
+
+.grupo-items {
+    width: 100%;
+}
+
+.familia-bloque {
+    margin-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+.familia-bloque:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.familia-titulo {
+    font-size: 9px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 4px;
+    display: block;
+    line-height: 1.2;
+}
+
+.item-suelto {
+    padding: 4px 0;
+    border-bottom: 1px solid #f1f1f1;
+    display: flex;
+    flex-direction: column;
+}
+.item-suelto:last-child {
+    border-bottom: none;
+}
+
+.item-codigo {
+    font-size: 7.5px;
+    color: #888;
+    margin-bottom: 1px;
+}
+
+.item-linea-principal {
+    display: flex;
+    justify-content: space-between; 
+    align-items: baseline;
+    width: 100%;
+    gap: 4px;
+}
+
+.item-descripcion {
+    font-size: 8.5px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Precio más grande y destacado */
+.item-precio {
+    font-size: 13.5px;
+    font-weight: bold;
+    color: #27ae60;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 600px) {
+    #contenedor-productos {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    }
+}
