@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo por Grupos</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- 1. BLOQUE ANTI-CACHÉ (Obliga a Chrome y Claro a pedir la página limpia) -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- 2. CSS CON VERSIÓN Y RUTA RELATIVA EXPLÍCITA -->
+    <link rel="stylesheet" href="./style.css?v=1.0">
 </head>
 <body>
 
@@ -14,7 +21,7 @@
 
     <!-- Banner de Presentación -->
     <div class="banner-container">
-        <img src="imagenes/presentacion.jpg" alt="Presentación Distribuidora Ruby" class="banner-img" onerror="this.style.display='none'">
+        <img src="./imagenes/presentacion.jpg" alt="Presentación Distribuidora Ruby" class="banner-img" onerror="this.style.display='none'">
     </div>
 
     <!-- Menú de Categorías -->
@@ -23,8 +30,8 @@
     <!-- Contenedor de Grupos y Productos -->
     <main id="contenedor-productos"></main>
 
-    <!-- Scripts -->
-    <script src="productos.js"></script>
-    <script src="app.js"></script>
+    <!-- 3. SCRIPTS CON VERSIÓN (Cache Busting) -->
+    <script src="./productos.js?v=1.0"></script>
+    <script src="./app.js?v=1.0"></script>
 </body>
 </html>
