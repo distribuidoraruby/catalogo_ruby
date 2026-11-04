@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuidora Ruby - Catálogos</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { 
+            /* Fondo verde degradado que ya venías usando */
+            background: linear-gradient(to bottom, #76d7c4, #ffffff);
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .header h1 { font-size: 24px; margin-bottom: 5px; }
+        .header p { font-size: 14px; color: #d5f5e3; }
+        
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .btn-catalogo {
+            display: block;
+            text-align: center;
+            background: white;
+            color: #2c3e50;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s, background 0.2s;
+        }
+        .btn-catalogo:hover {
+            transform: translateY(-2px);
+            background: #f4f4f9;
+            color: #3498db;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Distribuidora Ruby</h1>
+        <p>Seleccioná un catálogo para ingresar</p>
+    </div>
+
+    <div class="menu-container">
+        <!-- Estos enlaces apuntan a los nombres exactos de tus carpetas -->
+        <a href="/perfume" class="btn-catalogo">Perfumes</a>
+        <a href="/vn" class="btn-catalogo">Cosméticos VN</a>
+        <a href="/algabo" class="btn-catalogo">Algabo</a>
+        <a href="/plasticos" class="btn-catalogo">Plásticos</a>
+        <a href="/catalogo2" class="btn-catalogo">Catálogo 2</a>
+    </div>
+
+</body>
+</html>
